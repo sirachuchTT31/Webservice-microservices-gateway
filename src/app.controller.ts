@@ -15,11 +15,11 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('payment')
-  getPayment(): Observable<any> {
-    console.log('test')
-    return this.appService.getPayment()
-  }
+  // @Get('payment')
+  // getPayment(): Observable<any> {
+  //   console.log('test')
+  //   return this.appService.getPayment()
+  // }
 
   @Get('product')
   getProduct(): Observable<any> {

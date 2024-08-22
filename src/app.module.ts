@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { HttpModule, HttpService } from '@nestjs/axios';
+import { MicroProductModule } from './micro-product/micro-product.module';
+import { MicroPaymentModule } from './micro-payment/micro-payment.module';
 
 
 @Global()
@@ -27,9 +29,11 @@ import { HttpModule, HttpService } from '@nestjs/axios';
         }
       }
     ]),
+    MicroProductModule,
+    MicroPaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
-  // exports : [ClientsModule]
+  exports : [ClientsModule]
 })
 export class AppModule { }
